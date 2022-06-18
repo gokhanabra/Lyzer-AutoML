@@ -1,4 +1,4 @@
-# Lyzer
+# Welcome to Lyzer 👋
 
 ***Layzer is a cloud-based system that can preprocessing and modelling data.***
 

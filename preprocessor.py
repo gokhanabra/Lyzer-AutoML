@@ -45,13 +45,6 @@ def app():
                     if (df2.iloc[:, i].isnull().sum() != 0):
                         st.write(f'{columns2[i]} :  {df2.iloc[:, i].isnull().sum()} adet kayip veri bulunmaktadir.')
 
-
-
-            # Bundan sonraki kisimlarda yapilacak olan islem her bir kolon icin ayri ayri kayip veri islemi uygulaticak eger silme secenegi+
-            # + varsa tum satir silinmeli. kategorik veriye gore islmei arasitir
-
-
-
             with col2:
                 yap = ['Sil', 'Mean', 'Most Frequent', 'Median']
                 input = st.radio('Yapilmak isteneni seciniz', yap)
@@ -74,9 +67,6 @@ def app():
                 df3 = pd.DataFrame(imp.fit_transform(df2), columns=df2.columns)
 
             dfYaz(df3)
-
-            #Kayip verileri isledikten sonra kategorik veriyi numrik veriye cevirmeli. Modelling kismina csv gosterildiginde tum degerlerin
-            #numerik veri olmasi gerekmektedir.
 
             csv = df3.to_csv(index=False)
             st.download_button(

@@ -12,7 +12,13 @@ class MultiApp:
 
     def run(self):
         app = st.sidebar.selectbox(
-            'Ne yapilmasini istersiniz ',
+            'NE YAPILMASINI İSTERSİNİZ:',
             self.apps,
             format_func=lambda app: app['title'])
         app['function']()
+
+
+    """ MultiApp
+    Streamlit de dinamik sayfalama olmadığı için  MultiApp classı ile 
+    oluşturulan bu yapı sayesinde selectbox seçimine göre geçiş yapmaktadır."""
+

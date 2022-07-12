@@ -1,4 +1,4 @@
-
+#Ekstra HTML kodlarını kullanabiliyoruz
 def html():
     return"""
     <!DOCTYPE html>
@@ -11,7 +11,14 @@ def html():
                 font-size: 36px;
                 color: cyan;
             }
-    </style>
+            div.row-widget.stRadio > div{
+                flex-direction:row;
+            }
+            label.css-16huue1{
+                font-weight:bold;
+                font-size:16px;
+                padding-left:2px;
+            } 
     </head>
     <body>
         
